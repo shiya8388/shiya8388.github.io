@@ -4,7 +4,8 @@ const weight = prompt('Please enter your weight(KG)');
 let height = prompt('Please enter your height(CM)');
 height = height/100;
 let BMI = weight/(height*height);
-console.log(`your BMI is ${BMI}`);
+    
+    document.write(`your BMI is ${BMI}`);
 var text;
 switch (true) {
     case BMI <= 18.5:
@@ -16,5 +17,5 @@ switch (true) {
     default :
         text = "You are fit!";
 }
-console.log(text);
+document.write(text);
   </script>
