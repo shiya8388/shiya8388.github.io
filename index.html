@@ -1,1 +1,20 @@
 Hello!
+<script>
+const weight = prompt('Please enter your weight(KG)');
+let height = prompt('Please enter your height(CM)');
+height = height/100;
+let BMI = weight/(height*height);
+console.log(`your BMI is ${BMI}`);
+var text;
+switch (true) {
+    case BMI <= 18.5:
+        text = "You are rundown condition.";
+        break;
+    case BMI > 24:
+        text = "You are over weight!";
+        break;
+    default :
+        text = "You are fit!";
+}
+console.log(text);
+  </script>
