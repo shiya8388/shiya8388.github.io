@@ -5,7 +5,7 @@ const weight = prompt('Please enter your weight(KG)');
 let height = prompt('Please enter your height(CM)');
 height = height/100;
 let BMI = weight/(height*height);    
-    document.write(`your BMI is ${BMI}<br> `);
+    document.write(`your BMI is ${BMI.toFixed(2)}<br> `);
 var text;
 switch (true) {
     case BMI <= 18.5:
