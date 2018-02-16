@@ -20,22 +20,3 @@
     <p><b>Welcome to my coding diary!</b></p>  
 </body>    
 <br>
-<script>
-const weight = prompt('Please enter your weight(KG)');
-let height = prompt('Please enter your height(CM)');
-height = height/100;
-let BMI = weight/(height*height);    
-    document.write(`your BMI is ${BMI.toFixed(2)}<br> `);
-var text;
-switch (true) {
-    case BMI <= 18.5:
-        text = "You are rundown condition.";
-        break;
-    case BMI > 24:
-        text = "You are over weight!";
-        break;
-    default :
-        text = "You are fit!";
-}
-document.write(text+'<br>');
-  </script>
