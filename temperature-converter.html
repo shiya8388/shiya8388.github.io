@@ -1,1 +1,42 @@
 
+
+<meta http-equ0ytr0dxiv='Content-Type' content='text/html; charset=BIG5'>
+
+<style>
+     body{
+	text-align: center ;
+        background-color: black ;    
+   } 
+</style>
+
+
+<font color="#FFF2F2" face="Arial" size="5">  
+
+    <h1>Hello!</h1>
+    <p><b>攝氏及華氏溫度轉換</b></p> 
+    <p><b>Temperature Converter</b></p> 
+<br>
+<script language='javascript'>
+function tempConvert(form, kind) {
+	var c = form.TempC.value;//輸入的值
+	var f = form.TempF.value;// form.tempF是本身的值
+	if (kind == 'c2f') {
+		f = c*(9/5)+32;
+	} else if (kind = 'f2c') {
+		c = (f-32)*5/9;
+	}
+	form.TempC.value = Math.round(c*100)/100;
+	form.TempF.value = Math.round(f*100)/100;
+}
+
+  </script>
+
+<form>
+
+攝氏(C) 
+<input name="TempC" onchange='tempConvert(this.form, "c2f")'>
+ = 華氏(F)
+<input name="TempF" onchange='tempConvert(this.form, "f2c")'>
+</p>
+</form>
+   
