@@ -1,0 +1,91 @@
+
+<br>
+<br>
+<br>
+
+<style>
+     body{
+        background-color:gray ;  
+        line-height:1;  
+   } 
+</style>
+<h1 align="center"><font size="8" color="DarkRed"> My heart is ____ . </h1></font>
+<br>
+
+
+<pre> <!--short for "preformatted, for html,keep the spaces --> 
+
+<input id="size" onchange="printHeart()"> 
+
+<p align="center"><!--<p style="text-align:center"> --> 
+<font id=heart size="10" color="pink">
+
+<script>
+function widthFor(triangleH){
+  return 2*triangleH-1 ;
+}
+function printHeart(){
+  const e = document.querySelector("#heart"); //for combine Js and Html together
+  const size = document.querySelector("#size").value;
+  const topHeight = size;
+  const bottomHeight = 2*size;
+  const topWidth = 2*size;
+  const bottomWidth = 4*size;
+
+  let s="";
+  //this function prints n spaces    
+  function printSpaces (n){
+    for(let i=0;i<n;i++){
+      s+=" "; //short for s = s + " "
+    }
+  }
+
+  //this function prints n stars
+  function printStars (n){
+    for(let i=0;i<n;i++){
+      s+="🐷";
+    }
+  }
+
+  for(let line=1;line<=topHeight;line++){
+
+
+    let numStar = Math.round(Math.sqrt(size*size-(size-line)*(size-line)));
+    let numSpace = size - numStar;
+    console.log("topWidth",topWidth);
+    console.log("topHeight",topHeight);
+
+  
+
+    printSpaces(numSpace)
+    printStars(numStar)
+    printStars(numStar)    
+    printSpaces(numSpace)
+    printSpaces(numSpace)
+    printStars(numStar)
+    printStars(numStar)    
+    printSpaces(numSpace)   
+    s+="\n";
+    console.log("numSpace",numSpace);
+    console.log("numStar",numStar);   
+
+  }
+
+  for(let line=1;line<=bottomHeight;line++){
+
+
+    let numSpace=line-1;
+    let numStar= -line*2+bottomWidth+2;
+
+    printSpaces(numSpace)      
+    printStars(numStar) 
+    printSpaces(numSpace)  
+    s+="\n";
+  
+  }
+  e.innerText = s
+}
+
+</script>
+</p>
+</font>
